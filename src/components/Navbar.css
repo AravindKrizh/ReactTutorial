@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* NAVBAR CONTAINER */
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+
+  padding: 12px 24px;
+  background: #ffffff;
+  border-radius: 12px;
+
+  margin: 16px auto;
+  max-width: 1200px;
+}
+
+/* CENTER SECTION (FOR SEARCH) */
+.nav-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* LOGO */
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav-right {
+  justify-content: flex-end;
+}
+
+
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  color: #444;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* BUTTONS */
+.link {
+  cursor: pointer;
+}
+
+.btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ICONS */
+.icons span {
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* AVATAR */
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SEARCH */
+.search {
+  background: #f3f4f6;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+.search.wide {
+  min-width: 320px;
+}
+
+/* USER DROPDOWN */
+.user {
+  cursor: pointer;
+}
