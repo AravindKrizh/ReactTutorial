@@ -1,34 +1,28 @@
-import React, { useState } from 'react'
-import './App.css'
-import Count from './components/Count'
-import Navbar1 from './components/Navbar1'
-import Cards from './components/Cards'
-import CardComp from './components/CardComp'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import About from './components/About'
-
-
+import React, { useState } from "react";
+import "./App.css";
+import Navbar1 from "./components/Navbar1";
+import About from "./components/About";
+import Products from "./components/Products";
+import Home from "./components/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const[hide,sethide] = useState(true);
-    
-  let handlehide = () =>{
-     sethide(false)
-}
-  
-  return (
-  <div>
-    <Navbar1/>
-    <Cards/>
-    {/* <CardComp/> */}
-    <About/>
  
- {hide ? true : false}
- <button unclick ={handlehide} >
-  logout
- </button>
-    </div>
-  )
+
+  return (
+    <>
+      <Navbar1 />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+
+      
+    </>
+  );
 }
 
-export default App
+export default App;

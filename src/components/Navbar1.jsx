@@ -1,22 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
+
 export function Navbar1() {
-return (
-<nav className="nav">
-<div className="left">clever</div>
-<ul className="menu">
-<li>Home</li>
-<li>Product</li>
-<li>Features</li>
-<li>Pricing</li>
-</ul>
-<div className="right icons">
-<span>🔍</span>
-<span>🔔</span>
-<img className="avatar" src="https://i.pravatar.cc/40" />
-</div>
-</nav>
-);
+  return (
+    <nav className="nav">
+      <div className="left">Papagou Boutique.</div>
+
+      <ul className="menu">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/products">Products</Link>
+        </li>
+        <li><Link to="/About">About</Link></li>
+      </ul>
+
+      <div className="right icons">
+        <span>🔍</span>
+        <span>🔔</span>
+        <img className="avatar" src="https://i.pravatar.cc/40" />
+      </div>
+    </nav>
+  );
 }
 
 export default Navbar1;
